@@ -1,0 +1,28 @@
+public class RPS {
+	public static void main(String[] args) { 
+	      java.util.Scanner inData=new java.util.Scanner(System.in); 
+	       java.util.Random cpuSlump = new java.util.Random(); 
+
+	      int slumptal; 
+
+
+	      System.out.println("Hej och välkommen till Sten Sax Påse!"); 
+	      System.out.println("Vill du spela? (Ja/Nej)"); 
+	      String ord; 
+	      ord=inData.nextLine(); 
+	      if(ord.equalsIgnoreCase("Ja")) 
+	      { 
+	      System.out.println("Då tar vi och spelar!"); 
+	      System.out.println("Välj 1: Sten 2:sax 3:Påse"); 
+	      String ssp; 
+	      ssp=inData.nextLine(); 
+	      if (ssp.equalsIgnoreCase("1")) 
+	      {System.out.println("Du valde Sten!");} 
+	      if (ssp.equalsIgnoreCase("2")) 
+	      {System.out.println("Du valde Sax!");} 
+	      if (ssp.equalsIgnoreCase("3")) 
+	      {System.out.println("Du valde Påse!");} 
+	     } 
+	      else {System.out.println("Okej! På återseende!");}  
+	}
+}

@@ -1,0 +1,121 @@
+public class RPS {
+	 public static void metod1() {
+	      java.util.Scanner inData=new java.util.Scanner(System.in);
+	       java.util.Random cpuSlump = new java.util.Random();
+
+
+
+
+	      int slumptal;
+	      int förlust=0;
+	      int oavgjort=0;
+	      int vinst=0;
+
+	      
+	      System.out.println("Let's Play!");
+
+	      while (1==1)
+	      {
+
+
+
+	      System.out.println("\nChose 1: Rock 2:Scissor 3:Paper");
+	      int ssp;
+	      ssp=inData.nextInt();
+	      slumptal=cpuSlump.nextInt (3)+1;
+	      if (ssp==1){System.out.println("You Chose Rock!");}
+	      if (ssp==2){System.out.println("You Chose Scissors!");}
+	      if (ssp==3){System.out.println("You Chose Paper!");}
+	      if (slumptal==1){System.out.println("Computer Chose Rock!");}
+	      if (slumptal==2){System.out.println("Computer Chose Scissors!");}
+	      if (slumptal==3){System.out.println("Computer Chose Paper!");}
+	      if (slumptal==ssp){System.out.println("Tied!"); oavgjort++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 1 && slumptal == 3)
+	      {System.out.println("You Lost!");
+	      förlust++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 2 && slumptal == 1)
+	      {System.out.println("You Lost!");
+	      förlust++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 3 && slumptal == 2)
+	      {System.out.println("You Lost!");
+	      förlust++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 1 && slumptal == 2)
+	      {System.out.println("You Won!");
+	      vinst++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 2 && slumptal == 3)
+	      {System.out.println("You Won!");
+	      vinst++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+	      if (ssp == 3 && slumptal == 1)
+	      {System.out.println("You Won!");
+	      vinst++;
+	      System.out.println("\nVinster:" +vinst);
+	      System.out.println("Oavgjorda:" +oavgjort);
+	      System.out.println("Förluster:" +förlust);}
+
+
+
+	     if(vinst==10)
+	     {System.out.println("\nYou Won The Game!");
+	     System.out.println("Do You Want To Play Again?");
+	     String again;
+	     again=inData.next();
+	     vinst= vinst-vinst;
+	      oavgjort=oavgjort-oavgjort;
+	      förlust=förlust-förlust;
+	     if(again.equalsIgnoreCase("No")){break;}
+	     }
+	      if(förlust==10)
+	      {System.out.println("\nYou Lost!");
+	      System.out.println("Do You Want To Play Again?");
+	      String again2;
+	      again2=inData.next();
+	      vinst= vinst-vinst;
+	      oavgjort=oavgjort-oavgjort;
+	      förlust=förlust-förlust;
+	      if(again2.equalsIgnoreCase("No")){break;}
+	      }
+
+	      
+	      }
+	    
+	    
+	    }
+	    
+	    public static void main(String[] args) {
+
+	        java.util.Scanner inData=new java.util.Scanner(System.in);
+	     java.util.Random cpuSlump = new java.util.Random();
+	       
+
+	      System.out.println("Welcome To Rock, Paper, Scissors");
+	      System.out.println("Do You Want to Play? (Yes/No)");
+
+	      String ord;
+	      ord=inData.nextLine();
+	      if(ord.equalsIgnoreCase("Yes")){
+	      metod1();
+	      }
+	      else {System.out.println("Okay, Bye!");}
+
+	     
+
+	}
+	}
